@@ -3,7 +3,8 @@
 void num_swap(int *first_num, int *second_num);
 void bitonic_merge(int *array, size_t size, size_t start, size_t sequence,
 		char direc);
-void bitonic_sequence(int *array, size_t size, size_t start, size_t sequence, char direc);
+void bitonic_sequence(int *array, size_t size, size_t start,
+			size_t sequence, char direc);
 void bitonic_sort(int *array, size_t size);
 
 /**
@@ -55,7 +56,8 @@ void bitonic_merge(int *array, size_t size, size_t start, size_t sequence,
  * @sequence: The size of a block of the building bitonic sequence.
  * @direc: The direction to sort the bitonic sequence block in.
  */
-void bitonic_sequence(int *array, size_t size, size_t start, size_t sequence, char direc)
+void bitonic_sequence(int *array, size_t size, size_t start,
+			size_t sequence, char direc)
 {
 	/*Declaring variables*/
 	size_t cut = sequence / 2;

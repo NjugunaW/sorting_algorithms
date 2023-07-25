@@ -1,7 +1,9 @@
 #include "sort.h"
 
-void swap_prior_node(listint_t **list, listint_t **tail, listint_t **cocktail_shaker);
-void swap_post_node(listint_t **list, listint_t **tail, listint_t **cocktail_shaker);
+void swap_prior_node(listint_t **list, listint_t **tail,
+			listint_t **cocktail_shaker);
+void swap_post_node(listint_t **list, listint_t **tail,
+			listint_t **cocktail_shaker);
 void cocktail_sort_list(listint_t **list);
 
 /**
@@ -10,7 +12,8 @@ void cocktail_sort_list(listint_t **list);
  * @tail: double pointer to a struct
  * @cocktail_shaker: double pointer to a struct
  */
-void swap_prior_node(listint_t **list, listint_t **tail, listint_t **cocktail_shaker)
+void swap_prior_node(listint_t **list, listint_t **tail,
+			listint_t **cocktail_shaker)
 {
 /* Declaring the variable and initializing it to the next node */
 	listint_t *temporary = (*cocktail_shaker)->next;
@@ -44,7 +47,8 @@ void swap_prior_node(listint_t **list, listint_t **tail, listint_t **cocktail_sh
  * @tail: double pointer to a struct
  * @cocktail_shaker: double pointer to a struct
  */
-void swap_post_node(listint_t **list, listint_t **tail, listint_t **cocktail_shaker)
+void swap_post_node(listint_t **list, listint_t **tail,
+			listint_t **cocktail_shaker)
 {
 /* Declaration of temporary pointers*/
 	listint_t *temporary = (*cocktail_shaker)->prev;
@@ -89,7 +93,8 @@ void cocktail_sort_list(listint_t **list)
 	while (james_bond == false)
 	{
 		james_bond = true;
-		for (cocktail_shaker = *list; cocktail_shaker != tail; cocktail_shaker = cocktail_shaker->next)
+		for (cocktail_shaker = *list; cocktail_shaker != tail;
+				cocktail_shaker = cocktail_shaker->next)
 		{
 			if (cocktail_shaker->n > cocktail_shaker->next->n)
 			{

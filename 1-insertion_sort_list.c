@@ -6,7 +6,8 @@
  * @first_node: double pointer to a struct
  * @second_node: pointer to a struct
  */
-void node_swap(listint_t **list_head, listint_t **first_node, listint_t *second_node)
+void node_swap(listint_t **list_head,
+			listint_t **first_node, listint_t *second_node)
 {
 /*This line of code updates a pointer to point to the next node */
 	(*first_node)->next = second_node->next;

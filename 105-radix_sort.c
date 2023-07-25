@@ -1,7 +1,8 @@
 #include "sort.h"
 
 int find_highest(int *array, int size);
-void radix_counting_sort(int *array, size_t size, int signif_digit, int *buffer);
+void radix_counting_sort(int *array, size_t size,
+			int signif_digit, int *buffer);
 void radix_sort(int *array, size_t size);
 
 /**
@@ -34,7 +35,8 @@ int find_highest(int *array, int size)
  * @signif_digit: The significant digit to sort on.
  * @buffer: A buffer to store the sorted array.
  */
-void radix_counting_sort(int *array, size_t size, int signif_digit, int *buffer)
+void radix_counting_sort(int *array, size_t size,
+			int signif_digit, int *buffer)
 {
 	/*Declaring variables*/
 	int count[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};

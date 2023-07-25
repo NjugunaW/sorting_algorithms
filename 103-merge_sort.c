@@ -2,7 +2,8 @@
 
 void sub_sort(int *sub_array, int *sub_buffer, size_t front, size_t mid,
 		size_t back);
-void merge_sort_recursion(int *sub_array, int *sub_buffer, size_t front, size_t back);
+void merge_sort_recursion(int *sub_array, int *sub_buffer,
+		size_t front, size_t back);
 void merge_sort(int *array, size_t size);
 
 /**
@@ -26,7 +27,8 @@ void sub_sort(int *sub_array, int *sub_buffer, size_t front, size_t mid,
 	print_array(sub_array + mid, back - mid);
 /* For loop to sort the the two halves of subarray*/
 	for (a = front, b = mid; a < mid && b < back; c++)
-		sub_buffer[c] = (sub_array[a] < sub_array[b]) ? sub_array[a++] : sub_array[b++];
+		sub_buffer[c] = (sub_array[a] < sub_array[b])
+		? sub_array[a++] : sub_array[b++];
 /* For loop to handle rem elements in the left subarray*/
 	for (; a < mid; a++)
 		sub_buffer[c++] = sub_array[a];
@@ -49,7 +51,8 @@ void sub_sort(int *sub_array, int *sub_buffer, size_t front, size_t mid,
  * @front: The front index of the subarray.
  * @back: The back index of the subarray.
  */
-void merge_sort_recursion(int *sub_array, int *sub_buffer, size_t front, size_t back)
+void merge_sort_recursion(int *sub_array, int *sub_buffer,
+			size_t front, size_t back)
 {
 	size_t mid;
 
